@@ -18,6 +18,9 @@ public class GraphNode {
 
     public int getOutDegree(){
         int outDegree = 0;
+        if(outNeighbors.head == null){
+            return 0;
+        }
         Element<GraphNode> x = outNeighbors.head.data.linkedListElement;
         while(x != null){
             outDegree += 1;

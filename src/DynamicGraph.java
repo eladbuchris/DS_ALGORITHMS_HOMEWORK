@@ -82,17 +82,6 @@ public class DynamicGraph {
                         treeNode.leftChild = bfsTreeNode;
                         }
                     else{
-//                        if(treeNode.leftChild.rightSibling == null) {
-//                            treeNode.leftChild.rightSibling = bfsTreeNode;
-//                        }
-//                        else{
-//                            TreeNode run = treeNode.leftChild.rightSibling;
-//                            while(run.rightSibling != null){
-//                                run = run.rightSibling;
-//                            }
-//                            run.rightSibling = bfsTreeNode;
-//                        }
-//                    }
                         if(treeNode.leftChild.rightSibling == null) {
                             treeNode.leftChild.rightSibling = bfsTreeNode;
                             run = treeNode.leftChild.rightSibling;
@@ -100,10 +89,6 @@ public class DynamicGraph {
                         else{
                             run.rightSibling = bfsTreeNode;
                             run = run.rightSibling;
-//                            while(run.rightSibling != null){
-//                                run = run.rightSibling;
-//                            }
-//                            run.rightSibling = bfsTreeNode;
                         }
                     }
                     bfsQueue.enqueue(vNode.data);
