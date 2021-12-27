@@ -24,7 +24,6 @@ public class LinkedList<T> {
         }
         this.head = newElement;
         newElement.prev = null;
-
     }
     void listDelete(Element<T> x){
         if(x.prev != null){

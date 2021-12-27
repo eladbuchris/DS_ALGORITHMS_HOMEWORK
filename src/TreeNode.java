@@ -4,6 +4,8 @@ public class TreeNode {
     TreeNode leftChild;
     TreeNode rightSibling;
     int key;
+    boolean printed = false;
+    boolean seen = false;
 
     public  TreeNode(TreeNode parent,TreeNode leftChild,TreeNode rightSibling, int key){
         this.parent = parent;

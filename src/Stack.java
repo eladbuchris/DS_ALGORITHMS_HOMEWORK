@@ -1,5 +1,5 @@
 public class Stack<T> {
-    public LinkedList<T> L;
+    public LinkedList<T> L = new LinkedList<>();
 
     void push(T x){
         this.L.listInsert(x);
@@ -12,7 +12,10 @@ public class Stack<T> {
         L.listDelete(x);
         return x.data;
     }
-    Element<T> peek(){
-        return this.L.head;
+    T peek(){
+        if(this.L.head == null){
+            return null;
+        }
+        return this.L.head.data;
     }
 }

@@ -5,9 +5,9 @@ public class GraphEdge {
     Element<GraphNode> toElement;
 
     public GraphEdge(GraphNode from, GraphNode to){
-        from.addOutNeighbor(to);
-        this.toElement = from.outNeighbors.peek();
-        to.addInNeighbor(from);
+//        from.addOutNeighbor(to);
+        this.toElement = from.outNeighbors.head;
+//        to.addInNeighbor(from);
         this.fromElement = to.inNeighbors.head;
         this.edge[0] = from;
         this.edge[1] = to;
