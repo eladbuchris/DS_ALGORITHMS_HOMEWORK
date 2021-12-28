@@ -1,15 +1,19 @@
 
 public class TreeNode {
+    /*
+    A class to represent a TreeNode.
+     */
     TreeNode parent;
     TreeNode leftChild;
     TreeNode rightSibling;
     int key;
     int level = 0;
     boolean seen = false;
-    boolean inList = false;
-    Element<TreeNode> linkedListElement;
 
-    public  TreeNode(TreeNode parent,TreeNode leftChild,TreeNode rightSibling, int key){
+    public TreeNode(TreeNode parent,TreeNode leftChild,TreeNode rightSibling, int key){
+        /*
+        The constructor for the TreeNode class, initiates the given attributes.
+         */
         this.parent = parent;
         this.leftChild = leftChild;
         this.rightSibling = rightSibling;

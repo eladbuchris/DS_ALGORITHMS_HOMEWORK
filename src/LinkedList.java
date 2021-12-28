@@ -1,4 +1,7 @@
 class Element<T> {
+    /*
+    Class to represent linked list element.
+     */
     T data;
     Element<T> next;
     Element<T> prev;
@@ -10,12 +13,15 @@ class Element<T> {
 }
 
 public class LinkedList<T> {
+    /*
+    Class to represent a linked list.
+     */
 
     Element<T> head;
 
     void listInsert(T x){
         /*
-        Insert a node at the beginning of list
+        Insert a node at the beginning of list.
          */
         Element<T> newElement = new Element<>(x);
         newElement.next = this.head;
@@ -25,18 +31,10 @@ public class LinkedList<T> {
         this.head = newElement;
         newElement.prev = null;
     }
-    void listInsertByElement(Element<T> x){
-        /*
-        Insert a node at the beginning of list
-         */
-        x.next = this.head;
-        if(this.head != null){
-            this.head.prev = x;
-        }
-        this.head = x;
-        x.prev = null;
-    }
     void listDelete(Element<T> x){
+        /*
+        Delete element x from the list.
+         */
         if(x.prev != null){
             x.prev.next = x.next;
         }
@@ -57,19 +55,5 @@ public class LinkedList<T> {
         x.next = y.next;
         x.prev = y;
         y.next = x;
-    }
-    void listInsertBefore(Element<T> x, Element<T> y){
-        /*
-        Insert x after y
-         */
-//        if(y.next != null){
-//            y.next.prev = x;
-//        }
-        if(y.prev != null){
-            y.prev.next = x;
-            x.prev = y.prev;
-        }
-        y.prev = x;
-        x.next = y;
     }
 }

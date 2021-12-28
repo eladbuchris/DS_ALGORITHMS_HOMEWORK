@@ -48,37 +48,38 @@ class Queue<T> {
     QNode<T> front, rear;
     public Queue()
     {
+        /*
+            Constructor to initialize frontand rear.
+         */
         this.front = this.rear = null;
     }
 
-    // Method to add an key to the queue.
     void enqueue(T key)
     {
-        // Create a new LL node
+        /*
+            Adding a new node to the queue at the end
+         */
         QNode<T> temp = new QNode(key);
 
-        // If queue is empty, then new node is front and rear both
         if (this.rear == null) {
             this.front = this.rear = temp;
             return;
         }
-        // Add the new node at the end of queue and change rear
         this.rear.next = temp;
         this.rear = temp;
     }
 
-    // Method to remove an key from queue.
     T dequeue()
     {
-        // If queue is empty, return NULL.
+        /*
+            Remove the front of the queue
+         */
         if (this.front == null)
             return null;
 
-        // Store previous front and move front one node ahead
         QNode<T> temp = this.front;
         this.front = this.front.next;
 
-        // If front becomes NULL, then change rear also as NULL
         if (this.front == null)
             this.rear = null;
         return temp.key;

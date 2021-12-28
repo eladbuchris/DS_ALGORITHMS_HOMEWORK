@@ -1,5 +1,7 @@
 public class GraphNode {
-
+    /*
+    A class to represent a graphnode.
+     */
     LinkedList<GraphNode> outNeighbors;
     LinkedList<GraphNode> inNeighbors;
     Element<GraphNode> linkedListElement;
@@ -17,6 +19,9 @@ public class GraphNode {
     }
 
     public int getOutDegree(){
+        /*
+        Returns the outDegree of the node.
+         */
         int outDegree = 0;
         if(outNeighbors.head == null){
             return 0;
@@ -29,6 +34,9 @@ public class GraphNode {
         return outDegree;
     }
     public int getInDegree(){
+        /*
+        Returns the InDegree of the node.
+         */
         int inDegree = 0;
         Element<GraphNode> x = inNeighbors.head;
         while(x != null){
@@ -38,7 +46,6 @@ public class GraphNode {
         return inDegree;
     }
     public void addInNeighbor(GraphNode neighbor){
-
         inNeighbors.listInsert(neighbor);
     }
     public void addOutNeighbor(GraphNode neighbor){
