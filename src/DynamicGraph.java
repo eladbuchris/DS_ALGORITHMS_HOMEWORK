@@ -78,6 +78,7 @@ public class DynamicGraph {
                     vNode.data.d = u.d + 1;
                     TreeNode bfsTreeNode = new TreeNode(treeNode,null,
                             null,vNode.data.getKey());
+                    bfsTreeNode.level = treeNode.level + 1;
                     if(treeNode.leftChild == null){
                         treeNode.leftChild = bfsTreeNode;
                         }

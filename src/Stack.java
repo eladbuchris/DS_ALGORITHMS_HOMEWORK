@@ -18,4 +18,10 @@ public class Stack<T> {
         }
         return this.L.head.data;
     }
+    T getSecond(){
+        if(this.L.head.next == null){
+            return null;
+        }
+        return this.L.head.next.data;
+    }
 }

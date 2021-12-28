@@ -4,8 +4,10 @@ public class TreeNode {
     TreeNode leftChild;
     TreeNode rightSibling;
     int key;
-    boolean printed = false;
+    int level = 0;
     boolean seen = false;
+    boolean inList = false;
+    Element<TreeNode> linkedListElement;
 
     public  TreeNode(TreeNode parent,TreeNode leftChild,TreeNode rightSibling, int key){
         this.parent = parent;

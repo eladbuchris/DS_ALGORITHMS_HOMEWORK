@@ -25,6 +25,17 @@ public class LinkedList<T> {
         this.head = newElement;
         newElement.prev = null;
     }
+    void listInsertByElement(Element<T> x){
+        /*
+        Insert a node at the beginning of list
+         */
+        x.next = this.head;
+        if(this.head != null){
+            this.head.prev = x;
+        }
+        this.head = x;
+        x.prev = null;
+    }
     void listDelete(Element<T> x){
         if(x.prev != null){
             x.prev.next = x.next;
@@ -46,5 +57,19 @@ public class LinkedList<T> {
         x.next = y.next;
         x.prev = y;
         y.next = x;
+    }
+    void listInsertBefore(Element<T> x, Element<T> y){
+        /*
+        Insert x after y
+         */
+//        if(y.next != null){
+//            y.next.prev = x;
+//        }
+        if(y.prev != null){
+            y.prev.next = x;
+            x.prev = y.prev;
+        }
+        y.prev = x;
+        x.next = y;
     }
 }
