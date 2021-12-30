@@ -16,6 +16,9 @@ public class RootedTree {
         /*
         A method to print to the stream all nodes of the tree in pre order.
          */
+        if(root == null){
+            return;
+        }
         boolean from = true; //true -> came from parent or left sibling, false -> came from child
         TreeNode x = root;
         Queue<TreeNode> preOrderQueue = new Queue<>(); // A queue from the tree nodes, will be used later.

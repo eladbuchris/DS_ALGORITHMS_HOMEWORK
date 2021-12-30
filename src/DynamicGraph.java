@@ -82,6 +82,9 @@ public class DynamicGraph {
         /*
         A method to run bfs.
          */
+        if(nodesInGraph.head == null){
+            return null;
+        }
         Queue<GraphNode> bfsQueue = new Queue<>(); //the queue needed for the bfs.
         Queue<TreeNode> bfsTreeQueue = new Queue<>(); // the queue of treeNodes to create the bfsTree.
         TreeNode treeSource = bfsInitialization(source,bfsQueue,bfsTreeQueue); // Initialize colors,distance etc..
